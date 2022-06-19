@@ -1,0 +1,38 @@
+.powder {
+  .common-inputs {
+    padding: 5px;
+    margin: 5px;
+    border: 1pt solid white;
+    text-align: center;
+    label {
+      // position: absolute;
+      padding: 0 10pt;
+      width: 150pt;
+    }
+  }
+  .panels {
+    flex-direction: row;
+    display: flex;
+
+    .powder-panel {
+      padding: 5px;
+      margin: 5px;
+  
+      flex-grow: 1;
+      li {
+        list-style: none;
+        text-align: right;
+
+        .field-radio {
+          margin: auto 0;
+          width: 30pt;
+        }
+        label {
+          // position: absolute;
+          padding: 0 10pt;
+          width: 150pt;
+        }
+      } 
+    }
+  }
+}
