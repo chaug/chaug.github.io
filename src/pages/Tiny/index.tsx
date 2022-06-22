@@ -21,9 +21,9 @@ function TinyPage() {
         />
       </div>
       <div className="panels">
+        <PowderPanel density={density} intialGrain={16}/>
+        <PowderPanel density={density} intialGrain={18}/>
         <PowderPanel density={density} intialGrain={20}/>
-        <PowderPanel density={density} intialGrain={40}/>
-        <PowderPanel density={density} intialGrain={60}/>
       </div>
     </div>
   </div>;

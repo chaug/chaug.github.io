@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import './Powder.scss';
 
-export const powderDensity = 1.09      // gr/cm3
+export const powderDensity = 1.05      // gr/cm3
 const grainInGram   = 0.0647989 // grammes
 
 interface IMeasures {
