@@ -1,0 +1,33 @@
+.hexa-grid {
+    $WIDTH: 50px;
+    $PADDING: 5px;
+    $GAP: 15px;
+
+    padding: $PADDING;
+
+    display: flex;
+    flex-direction: column;
+    gap: $GAP;
+    .hexa-line {
+        display: flex;
+        flex-direction: row;
+        gap: $GAP;
+
+        &.hexa-line-even {
+            padding-left: 0px;
+        }
+        &.hexa-line-odd {
+            padding-left: $PADDING + 0.5*$WIDTH;
+        }
+
+        .hexa-cell {
+            border: 1px solid white;
+            border-radius: 3*$PADDING;
+
+            width: $WIDTH;
+            padding: $PADDING;
+
+            text-align: center;
+        }
+    }
+}
