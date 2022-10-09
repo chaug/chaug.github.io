@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { note2string } from './Notes';
+import { number2note } from './Notes';
 import './HexaGrid.scss';
 
 const range = (start:number, end:number) => Array.from({length: (1+end-start)}, (value, key) => start+key)
@@ -33,7 +33,7 @@ function HexaGrid({
             { range( -width, width ).map( j => {
                 const note = centralNote + i*dr_step + (j-offset)*r_step;
                 return <div key={`hexa-cell-${i}-${j}`} className="hexa-cell">
-                        { note2string(note, withOctave) }
+                        { number2note(note, withOctave).name }
                     </div>;
                 }
             )}

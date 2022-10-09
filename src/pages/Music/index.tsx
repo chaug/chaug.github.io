@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
-import { string2note, note2string } from './Notes';
+import { number2note, name2note } from './Notes';
 import HexaGrid from './HexaGrid';
 
 function MusicPage() {
 
   const [ withOctave, setWithOctave ] = useState( true )
-  const [ centralNote, setCentralNote ] = useState( string2note("A4", withOctave) )
+  const [ centralNote, setCentralNote ] = useState( name2note("A4", withOctave)?.note || 48 )
 
   return <div className="music-page">
     <h2>Exploration les accords</h2>
@@ -30,13 +30,13 @@ function MusicPage() {
             Central Note
           </label>
           <input name="centralNote"
-            value={note2string(centralNote, withOctave)}
+            value={number2note(centralNote, withOctave).name}
             onChange={(event) => {
-              setCentralNote(string2note(
+              const note = name2note(
                 event.target.value,
-                withOctave,
-                centralNote
-              ))
+                withOctave
+              )?.note || centralNote
+              setCentralNote(note)
             }}
           />
         </div>
